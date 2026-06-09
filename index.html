@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stalag 326 | Erinnerung vor der eigenen Haustür</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="stage" id="stage" aria-label="Virtueller Rundgang Stalag 326">
+        <img class="site-image" src="assets/memorial-site.png" alt="Ruhige Ansicht eines Erinnerungsortes mit Weg, Wiese und Gebäuden">
+        <div class="shade"></div>
+
+        <header class="topbar">
+          <div>
+            <p class="kicker">Schloß Holte-Stukenbrock</p>
+            <h1>Stalag 326 (VI K)</h1>
+            <p class="hero-subtitle">Erinnerung vor der eigenen Haustür</p>
+            <p class="hero-question">
+              Wie erinnert Schloß Holte-Stukenbrock heute an einen der großen Orte des Leidens sowjetischer Kriegsgefangener im Nationalsozialismus?
+            </p>
+          </div>
+          <button class="reset-button" type="button" id="resetView" aria-label="Zur Startstation zurückkehren">
+            Start
+          </button>
+        </header>
+
+        <nav class="hotspots" aria-label="Stationen des Rundgangs">
+          <button class="hotspot" style="--x: 53%; --y: 72%;" data-stop="eingang" type="button">
+            <span>1</span>
+          </button>
+          <button class="hotspot" style="--x: 64%; --y: 46%;" data-stop="lager" type="button">
+            <span>2</span>
+          </button>
+          <button class="hotspot" style="--x: 16%; --y: 72%;" data-stop="opfer" type="button">
+            <span>3</span>
+          </button>
+          <button class="hotspot" style="--x: 76%; --y: 63%;" data-stop="bildung" type="button">
+            <span>4</span>
+          </button>
+        </nav>
+
+        <aside class="panel" aria-live="polite">
+          <p class="panel-count" id="panelCount">Station 1 von 4</p>
+          <h2 id="stopTitle">Erinnerung vor Ort</h2>
+          <p id="stopText">
+            Der Rundgang beginnt mit der Frage, warum lokale Erinnerungskultur wichtig ist. Das Stalag 326 zeigt, dass historische Verantwortung nicht nur an bekannten Orten beginnt, sondern auch dort, wo Menschen heute leben.
+          </p>
+          <dl class="facts">
+            <div>
+              <dt>Perspektive</dt>
+              <dd id="stopPerspective">Lokale Erinnerungskultur</dd>
+            </div>
+            <div>
+              <dt>Leitfrage</dt>
+              <dd id="stopQuestion">Was bedeutet Erinnerung vor der eigenen Haustür?</dd>
+            </div>
+          </dl>
+          <div class="panel-actions">
+            <button type="button" id="prevStop">Zurück</button>
+            <button type="button" id="nextStop">Weitergehen</button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="story" id="ort">
+        <div class="section-heading">
+          <p class="kicker dark">Der Ort</p>
+          <h2>Was war das Stalag 326?</h2>
+        </div>
+        <div class="two-column">
+          <p>
+            Das Stalag 326 wurde 1941 als Kriegsgefangenenlager errichtet. Besonders sowjetische Kriegsgefangene litten unter Hunger, Krankheiten und unmenschlichen Lebensbedingungen. Tausende Menschen starben hier.
+          </p>
+          <figure class="media-box">
+            <div class="photo-placeholder">Historisches Bild</div>
+            <figcaption>Hier kann später ein belegtes historisches Foto eingefügt werden.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="story survey" id="ergebnisse">
+        <div class="section-heading">
+          <p class="kicker dark">Meine Umfrage</p>
+          <h2>Erinnerung in Schloß Holte-Stukenbrock</h2>
+          <p class="lead">Kennen die Menschen vor Ort das Stalag 326 überhaupt?</p>
+        </div>
+        <div class="method-note">
+          <strong>Kleine Befragung:</strong> 5 Antworten aus verschiedenen Altersgruppen. Die Ergebnisse sind nicht repräsentativ, zeigen aber Tendenzen für die lokale Wahrnehmung.
+        </div>
+        <div class="results" aria-label="Umfrageergebnisse">
+          <div class="result" style="--value: 80%">
+            <span>80 %</span>
+            <p>haben bereits vom Stalag 326 gehört</p>
+          </div>
+          <div class="result" style="--value: 60%">
+            <span>60 %</span>
+            <p>haben die Gedenkstätte besucht</p>
+          </div>
+          <div class="result" style="--value: 100%">
+            <span>100 %</span>
+            <p>fühlen sich nicht vollständig informiert</p>
+          </div>
+        </div>
+        <div class="survey-detail">
+          <article>
+            <h3>Sichtbarkeit</h3>
+            <p>3 von 5 Befragten finden, dass das Stalag 326 nur teilweise sichtbar ist. Eine Person bewertet die Sichtbarkeit ausdrücklich als nicht ausreichend.</p>
+          </article>
+          <article>
+            <h3>Wichtigkeit</h3>
+            <p>4 von 5 Befragten halten die Erinnerung an die Opfer für wichtig oder sehr wichtig. Die moralische Bedeutung des Erinnerns wird also deutlich wahrgenommen.</p>
+          </article>
+          <article>
+            <h3>Informationslücke</h3>
+            <p>Keine befragte Person fühlt sich vollständig informiert. Drei Personen antworten mit „Nein“, zwei mit „Teilweise“.</p>
+          </article>
+        </div>
+        <div class="measure-block">
+          <h3>Gewünschte Maßnahmen</h3>
+          <div class="measure-row">
+            <span>Mehr Informationen in Schulen</span>
+            <div><i style="width: 80%"></i></div>
+            <strong>4/5</strong>
+          </div>
+          <div class="measure-row">
+            <span>Informationsschilder im Stadtgebiet</span>
+            <div><i style="width: 60%"></i></div>
+            <strong>3/5</strong>
+          </div>
+          <div class="measure-row">
+            <span>Moderne Website oder App</span>
+            <div><i style="width: 60%"></i></div>
+            <strong>3/5</strong>
+          </div>
+          <div class="measure-row">
+            <span>Führungen, Vorträge und lokale Medien</span>
+            <div><i style="width: 40%"></i></div>
+            <strong>2/5</strong>
+          </div>
+        </div>
+        <p class="source-note">Quelle: eigene kleine Umfrage, Juni 2026.</p>
+      </section>
+
+      <section class="story institutions-band">
+        <div class="section-heading">
+          <p class="kicker dark">Antworten lokaler Institutionen</p>
+          <h2>Wie gehen Stadt und Kirchengemeinde mit dem Thema um?</h2>
+          <p class="lead">
+            Zusätzlich zur Umfrage können Rückmeldungen der Stadt Schloß Holte-Stukenbrock und der Kirchengemeinde zeigen, wie lokale Verantwortung praktisch verstanden wird.
+          </p>
+        </div>
+        <div class="institution-grid">
+          <article>
+            <p class="institution-label">Stadt Schloß Holte-Stukenbrock</p>
+            <h3>Sichtbarkeit im öffentlichen Raum</h3>
+            <dl class="qa-list">
+              <div>
+                <dt>Frage</dt>
+                <dd>Wie sichtbar ist das Stalag 326 heute im Stadtbild und in der kommunalen Erinnerungskultur?</dd>
+              </div>
+              <div>
+                <dt>Antwort</dt>
+                <dd>Hier kann die Antwort der Stadt eingefügt werden, zum Beispiel zu Gedenkveranstaltungen, Bildungsangeboten, Beschilderung, Öffentlichkeitsarbeit oder Zusammenarbeit mit der Gedenkstätte.</dd>
+              </div>
+            </dl>
+          </article>
+          <article>
+            <p class="institution-label">Kirchengemeinde Schloß Holte</p>
+            <h3>Erinnerung als ethische Aufgabe</h3>
+            <dl class="qa-list">
+              <div>
+                <dt>Frage</dt>
+                <dd>Welche Rolle spielt das Erinnern an NS-Zeit, Krieg und Opfer des Stalag 326 in der kirchlichen Arbeit vor Ort?</dd>
+              </div>
+              <div>
+                <dt>Antwort</dt>
+                <dd>Hier kann die Antwort der Kirchengemeinde eingefügt werden, zum Beispiel zu Gedenkgottesdiensten, Friedensarbeit, Bildungsprojekten, Seelsorge oder Kooperationen mit Schulen und Initiativen.</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+        <div class="comparison-note">
+          <h3>Auswertung für die Präsentation</h3>
+          <p>
+            Dieser Abschnitt kann zeigen, ob sich die Wahrnehmung der Bevölkerung mit der Perspektive der Institutionen deckt: Wird das Stalag 326 als ausreichend sichtbar erlebt, oder gibt es eine Lücke zwischen vorhandenen Angeboten und öffentlicher Wahrnehmung?
+          </p>
+        </div>
+      </section>
+
+      <section class="story analysis-band">
+        <div class="section-heading">
+          <p class="kicker dark">Auswertung</p>
+          <h2>Was zeigen die Antworten?</h2>
+        </div>
+        <div class="insight-grid">
+          <article>
+            <span>1</span>
+            <h3>Der Name ist bekannt</h3>
+            <p>Die Mehrheit hat schon vom Stalag 326 gehört. Erinnerung ist also nicht vollständig verschwunden.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Die Geschichte bleibt unscharf</h3>
+            <p>Gleichzeitig fühlt sich niemand wirklich ausreichend informiert. Genau hier entsteht der Bildungsauftrag.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Schule spielt eine Schlüsselrolle</h3>
+            <p>Am häufigsten wurde mehr Information in Schulen genannt. Lokale Geschichte soll stärker Teil des Lernens werden.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="story theology">
+        <div class="section-heading">
+          <p class="kicker dark">Theologische Perspektive</p>
+          <h2>Warum erinnern?</h2>
+        </div>
+        <p class="scripture">Tut dies zu meinem Gedächtnis.</p>
+        <p>
+          Erinnerung gehört zum Kern des Christentums. Sie bewahrt die Würde der Opfer und verhindert, dass Geschichte vergessen wird. Lokale Erinnerungsorte wie das Stalag 326 zeigen, dass historische Verantwortung nicht nur an bekannten Orten wie Auschwitz beginnt, sondern auch vor der eigenen Haustür.
+        </p>
+        <div class="theology-grid">
+          <article>
+            <h3>Gedächtnis</h3>
+            <p>Christliche Erinnerung ist mehr als Rückblick. Sie vergegenwärtigt Leid, Schuld und Hoffnung im Heute.</p>
+          </article>
+          <article>
+            <h3>Würde</h3>
+            <p>Wer erinnert, widerspricht dem Vergessen der Opfer und nimmt ihre Menschlichkeit ernst.</p>
+          </article>
+          <article>
+            <h3>Verantwortung</h3>
+            <p>Erinnerung fragt, welche Konsequenzen aus Geschichte für Gegenwart und Zukunft entstehen.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="reflection">
+        <p class="kicker">Reflexion</p>
+        <h2>Warum kennen viele Menschen Auschwitz, aber nur wenige das Stalag 326?</h2>
+        <p>
+          Lokale Erinnerungskultur fordert dazu auf, Verantwortung dort wahrzunehmen, wo Geschichte konkret geworden ist.
+        </p>
+      </section>
+
+      <section class="finale">
+        <p class="kicker dark">Fazit</p>
+        <h2>Erinnerung beginnt dort, wo wir leben.</h2>
+        <ul>
+          <li>Erinnerungsort</li>
+          <li>Lernort</li>
+          <li>Mahnmal gegen Krieg und Menschenfeindlichkeit</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
