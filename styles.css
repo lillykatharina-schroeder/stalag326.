@@ -262,7 +262,6 @@ h1 {
 }
 
 .story,
-.reflection,
 .finale {
   padding: clamp(44px, 8vw, 96px) clamp(22px, 6vw, 76px);
 }
@@ -277,7 +276,6 @@ h1 {
 }
 
 .section-heading h2,
-.reflection h2,
 .finale h2 {
   margin-bottom: 0;
   font-size: clamp(2rem, 4.8vw, 4.6rem);
@@ -294,8 +292,7 @@ h1 {
 }
 
 .two-column > p,
-.theology > p:not(.scripture),
-.reflection p {
+.theology > p:not(.scripture) {
   max-width: 850px;
   color: #383a36;
   font-size: clamp(1.1rem, 2vw, 1.55rem);
@@ -306,22 +303,138 @@ h1 {
   background: #e6e4dc;
 }
 
+.context-band {
+  background: #ded8cc;
+}
+
+.context-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.context-grid article {
+  min-height: 330px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(143, 47, 36, 0.12), transparent 58%),
+    rgba(244, 241, 235, 0.76);
+}
+
+.context-grid span {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--accent-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 4.2vw, 4.1rem);
+  font-weight: 800;
+  line-height: 0.88;
+}
+
+.context-grid small {
+  display: block;
+  min-height: 34px;
+  margin-bottom: 34px;
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.context-grid h3,
+.context-note h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  line-height: 1.05;
+}
+
+.context-grid p,
+.timeline p,
+.context-note p {
+  margin: 0;
+  color: #3f413b;
+  line-height: 1.58;
+}
+
+.history-detail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.history-detail article {
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.history-detail h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  line-height: 1.05;
+}
+
+.history-detail p {
+  margin: 0;
+  color: #3f413b;
+  line-height: 1.58;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.timeline div {
+  min-height: 190px;
+  padding: 22px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.timeline strong {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.context-note {
+  max-width: 980px;
+  margin-top: 18px;
+  padding: clamp(22px, 4vw, 34px);
+  background: #171717;
+}
+
+.context-note h3,
+.context-note p {
+  color: #fff;
+}
+
 .media-box {
   margin: 0;
 }
 
-.photo-placeholder {
-  display: grid;
-  place-items: center;
-  min-height: 320px;
-  border: 1px dashed rgba(23, 23, 23, 0.34);
-  background:
-    linear-gradient(135deg, rgba(143, 47, 36, 0.08), transparent),
-    #d7d2c6;
-  color: #4b4c47;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
+.historical-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.04);
+  border: 1px solid rgba(23, 23, 23, 0.16);
 }
 
 .image-box img {
@@ -495,17 +608,29 @@ figcaption,
   background: #f0ede5;
 }
 
-.institution-grid {
+.institution-points {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 
-.institution-grid article,
-.comparison-note {
-  padding: clamp(22px, 4vw, 34px);
+.institution-points article {
+  position: relative;
+  min-height: 250px;
+  padding: 22px;
+  overflow: hidden;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.56);
+  outline: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.institution-points article:hover,
+.institution-points article:focus-within,
+.institution-points article:focus {
+  transform: translateY(-2px);
+  border-color: rgba(101, 31, 25, 0.45);
+  background: #f7f5ef;
 }
 
 .institution-label {
@@ -518,51 +643,54 @@ figcaption,
   text-transform: uppercase;
 }
 
-.institution-grid h3,
-.comparison-note h3 {
-  margin: 0 0 22px;
-  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
-  line-height: 1.05;
-}
-
-.qa-list {
-  display: grid;
-  gap: 18px;
+.institution-points h3 {
   margin: 0;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.08;
 }
 
-.qa-list div {
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
+.prompt {
+  margin: 18px 0 0;
+  color: #3f413b;
+  line-height: 1.45;
 }
 
-.qa-list dt {
-  margin-bottom: 8px;
-  color: var(--muted);
+.hover-answer {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 22px;
+  opacity: 0;
+  overflow: auto;
+  background: #171717;
+  color: #fff;
+  transform: translateY(14px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.institution-points article:hover .hover-answer,
+.institution-points article:focus-within .hover-answer,
+.institution-points article:focus .hover-answer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-answer strong {
+  color: var(--gold);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.qa-list dd,
-.comparison-note p {
+.hover-answer p {
   margin: 0;
-  color: #383a36;
-  line-height: 1.58;
-}
-
-.comparison-note {
-  max-width: 980px;
-  margin-top: 18px;
-  background: #171717;
-  color: #fff;
-}
-
-.comparison-note h3,
-.comparison-note p {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+  line-height: 1.48;
 }
 
 .theology {
@@ -600,18 +728,6 @@ figcaption,
   line-height: 1.05;
 }
 
-.reflection {
-  min-height: 62vh;
-  display: grid;
-  align-content: center;
-  background: var(--accent-dark);
-  color: #fff;
-}
-
-.reflection p {
-  color: rgba(255, 255, 255, 0.82);
-}
-
 .finale {
   background: var(--paper);
 }
@@ -647,15 +763,17 @@ figcaption,
   }
 
   .two-column,
+  .context-grid,
+  .history-detail,
+  .timeline,
   .results,
   .survey-detail,
   .insight-grid,
   .theology-grid,
-  .institution-grid {
+  .institution-points {
     grid-template-columns: 1fr;
   }
 
-  .photo-placeholder,
   .image-box img {
     min-height: 240px;
   }
@@ -664,6 +782,7 @@ figcaption,
     grid-template-columns: 1fr;
     gap: 8px;
   }
+
 }
 
 @media (max-width: 560px) {

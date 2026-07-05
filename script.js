@@ -10,7 +10,7 @@ const stops = [
   {
     id: "lager",
     title: "Was war das Stalag 326?",
-    text: "Das Stalag 326 wurde 1941 als Kriegsgefangenenlager errichtet. Besonders sowjetische Kriegsgefangene litten unter Hunger, Krankheiten und unmenschlichen Lebensbedingungen. Tausende Menschen starben hier.",
+    text: "Das Stalag 326 wurde 1941 als Rekrutierungs- und Durchgangslager des Wehrkreises VI eingerichtet. Zwischen 180.000 und 200.000 Kriegsgefangene wurden hier registriert und vielfach zur Zwangsarbeit weiterverteilt.",
     perspective: "Historischer Ort",
     question: "Welche Geschichte wird hier sichtbar?",
     view: { x: "64%", y: "46%", zoom: 2.18 }
